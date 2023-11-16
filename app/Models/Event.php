@@ -21,6 +21,9 @@ class Event extends Model
         'address',
         'start_date',
         'end_date',
+        'access',
+        'instagram_post_link',
+        'facebook_post_link',
         'summary',
     ];
 }

@@ -11,7 +11,23 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        // return view('event.events', ['events' => auth()->user()->events]);
+        return view('event.events', ['events' => 
+            [
+                [
+                    'id'=>'0',
+                    'title'=>'event 1'
+                ],
+                [
+                    'id'=>'1',
+                    'title'=>'event 2'
+                ],
+                [
+                    'id'=>'2',
+                    'title'=>'event 3'
+                ],
+            ],
+        ]);
     }
 
     /**
@@ -19,7 +35,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('event.create');
     }
 
     /**
