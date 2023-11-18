@@ -1,0 +1,258 @@
+.evenements{
+    font-family: "Gill Sans", sans-serif;
+
+    margin: 0 13% 0 13%;
+}
+
+
+
+
+
+.evenements-a-venir-main{
+    /* background-color: lightblue; */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.evenements-a-venir-secondary-container{
+    width: 100%;
+}
+
+
+
+.evenements-a-venir-secondary{
+    /* background-color: lightblue; */
+    
+    display: grid;
+    align-items: end;
+    
+    width: 100%;
+    height: 75%;
+
+    justify-items: end;
+}
+
+
+
+
+
+
+.events{
+    text-transform: uppercase;
+}
+
+.events li{
+    background-color: rgb(236, 236, 236);
+
+    height: 160px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+}
+
+.events li img{
+    max-height: 140px;
+
+    vertical-align: middle;
+
+    margin: 0 20px 0 20px;
+}
+
+.events li h3{
+    font-size: 2rem;
+
+    color: rgb(236, 73, 73);
+
+    letter-spacing: -0.2rem;
+}
+
+.events .left_side{
+    display: flex;
+    align-items: center;
+}
+
+.events .left_side p{
+
+    height: 75px;
+    width: 100%;
+
+    color: lightslategray;
+
+
+    max-height: 3.5em;
+
+    position: relative;
+    top: -15px;
+
+    overflow: hidden;
+
+    text-transform: none;
+}
+
+.events .date{
+    margin: 0 20px 0 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: rgb(236, 73, 73);
+}
+
+.events .month{
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    letter-spacing: -0.2rem;
+}
+
+.events .number{
+    margin: 0;
+    
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-weight: 900;
+
+    height: 100%;
+
+
+    transform: scale(1, 1.5);
+    /* Safari and Chrome */
+    -webkit-transform: scale(1, 1.5);
+    /* Firefox */
+    -moz-transform: scale(1, 1.5);
+    /* IE 9+ */
+    -ms-transform: scale(1, 1.5);
+    /* Opera */
+    -o-transform: scale(1, 1.5);
+}
+
+
+
+
+.evenements-a-venir .gros_carre_gris{
+    height: 100%;
+    width: 75%;
+
+    background-color: rgb(236, 236, 236);
+}
+
+
+
+
+.evenements-a-venir .petit_carre_gris{
+    height: 50%;
+    width: 75%;
+
+    background-color: rgb(236, 236, 236);
+}
+
+
+
+
+
+
+
+
+
+.evenements-passes .cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-color: pink; */
+}
+
+.evenements-passes .card{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    align-items: center;
+
+    width: 31%;
+    
+    row-gap: 20px;
+
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* box-shadow: 0 2px 5px; */
+
+    background-color: rgb(236, 236, 236);
+}
+
+.evenements-passes .card a{
+    text-align: center;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background-color: rgb(236, 73, 73);
+    border-radius: 3px;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+.evenements-passes .card .card-date{
+    background-color: rgb(236, 73, 73);
+    color: white;
+
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    font-size: 1.4rem;
+}
+
+.inner-shadow{
+    box-shadow: inset 0 0 10px 0 #00000052;
+}
+
+.evenements-passes .card img{
+    max-height: 350px;
+    max-width: 350px;
+    width: 75%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    /* Center the image */
+    margin: auto;
+    display: block;
+}
+
+.evenements-passes .card .content{
+    padding: 10px;
+
+    min-height: 425px;
+}
+
+.evenements-passes .card .content .card-title{
+    color: rgb(236, 73, 73);
+    font-weight: bold;
+
+    font-size: 1.2rem;
+}
+
+.evenements-passes .card .content .card-text{
+    color: lightslategray;
+
+    font-size: 1rem;
+}
