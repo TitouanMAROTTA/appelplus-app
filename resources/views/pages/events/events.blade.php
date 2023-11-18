@@ -1,79 +1,84 @@
 <link rel="stylesheet" href="{{ asset('css/events.css') }}">
 
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Evenements à venir') }}
+        </h2>
+    </x-slot>
+
+    <div class="evenements">
 
 
-<div class="evenements">
 
 
 
 
 
 
+    <section class="evenements-a-venir">
+        <h2>Evenements à venir</h2>
 
-
-<section class="evenements-a-venir">
-    <h2>Evenements à venir</h2>
-
-    <div class="evenements-a-venir-main">
-        <ul class="events">
-            @foreach ($events as $event)
-                <li id={{ $event->id }}>
-                    <div class="left_side">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
-                        
-                        <div>
-                            <h3>{{ $event->title }}</h3>
-                            <p class="truncateTextToMaxLength100">{{ $event->content }}</p>
+        <div class="evenements-a-venir-main">
+            <ul class="events">
+                @foreach ($events as $event)
+                    <li id={{ $event->id }}>
+                        <div class="left_side">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
+                            
+                            <div>
+                                <h3>{{ $event->title }}</h3>
+                                <p class="truncateTextToMaxLength100">{{ $event->content }}</p>
+                            </div>
                         </div>
+
+                        <div class="date">
+                            <p class="month truncateTextToMaxLength3">{{ $event->date->format('F')}}</p>
+                            <p class="number">{{ $event->date->format('j')}}</p>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+
+            <div class="evenements-a-venir-secondary-container">
+                <div class="evenements-a-venir-secondary">
+                    <div class="gros_carre_gris">
+                        
                     </div>
 
-                    <div class="date">
-                        <p class="month truncateTextToMaxLength3">{{ $event->date->format('F')}}</p>
-                        <p class="number">{{ $event->date->format('j')}}</p>
+                    <div class="petit_carre_gris">
+                        
                     </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+
+
+
+    <section class="evenements-passes">
+        <h2>Récapitulatif des évènements passés</h2>
+
+        <ul class="cards">
+            @foreach ($events as $event)
+                <li class="card" id={{ $event->id }}>
+                    <p class="card-date inner-shadow">{{ $event->date->format('j F Y')}}</p>
+
+                    <div class="content">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
+                        <p class="card-title">{{ $event->title}}</p>
+                        <p class="card-text truncateTextToMaxLength300">{{ $event->content}}</p>
+                    </div>
+
+                    <a href="{{ route('event.index') }}" class="inner-shadow">Voir le récap</a>
                 </li>
             @endforeach
         </ul>
-
-        <div class="evenements-a-venir-secondary-container">
-            <div class="evenements-a-venir-secondary">
-                <div class="gros_carre_gris">
-                    
-                </div>
-
-                <div class="petit_carre_gris">
-                    
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    
-</section>
-
-
-
-
-
-<section class="evenements-passes">
-    <h2>Récapitulatif des évènements passés</h2>
-
-    <ul class="cards">
-        @foreach ($events as $event)
-            <li class="card" id={{ $event->id }}>
-                <p class="card-date inner-shadow">{{ $event->date->format('j F Y')}}</p>
-
-                <div class="content">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
-                    <p class="card-title">{{ $event->title}}</p>
-                    <p class="card-text truncateTextToMaxLength300">{{ $event->content}}</p>
-                </div>
-
-                <a href="{{ route('event.index') }}" class="inner-shadow">Voir le récap</a>
-            </li>
-        @endforeach
-    </ul>
-</section>
+    </section>
 
 
 
@@ -85,6 +90,7 @@
 
 
 </div>
+</x-app-layout>
 
 
 
