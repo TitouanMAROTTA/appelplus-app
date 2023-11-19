@@ -12,7 +12,14 @@
 
     <!-- ======================= -->
     @if (1)
+        
+        
         <a href="{{ route('event.create') }}" class="inner-shadow">Créer un évènement</a>
+
+        @isset($success)
+            <p class="success">{{ $success }}</p>
+        @endisset
+
     @endif
 
 

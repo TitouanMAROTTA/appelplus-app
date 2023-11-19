@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
+use App\Models\Event;
+
 class EventController extends Controller
 {
     /**
@@ -67,11 +69,30 @@ class EventController extends Controller
             'summary' => 'string|nullable',
         ]);
 
-        // data is validated
+        // echo("les données entrées sont valides");
 
-        echo("les données entrées sont valides");
+        // Create a new Event instance
+        $event = new Event();
 
-        dd($validated);
+        // Set the attributes
+        $event->title = $validated['title'];
+        $event->description = $validated['content'];
+        $event->start_date = $validated['start_date'];
+        $event->end_date = $validated['end_date'];
+        $event->address = $validated['address'];
+        $event->access = $validated['access'];
+        $event->instagram_post_link = $validated['instagram_post_link'];
+        $event->facebook_post_link = $validated['facebook_post_link'];
+        $event->creator = $validated['creator'];
+        $event->summary = $validated['summary'];
+
+        // Save the event to the database
+        $event->save();
+
+        // Optionally, you can redirect the user to a specific page
+        return redirect()->route('event.index')->with('success', 'Event created successfully');
+
+        // dd($validated);
 
 
 
