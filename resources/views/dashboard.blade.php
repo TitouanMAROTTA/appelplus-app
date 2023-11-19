@@ -13,11 +13,7 @@
                 </div>
             </div>
             <div>
-                <!-- <form method="get" action="{{ route('event.index') }}">
-                    @csrf
-
-                    <button type="submit">redirect to "events.blade.php"</button>
-                </form> -->
+                
                 <a href="{{ route('event.index') }}">Click me to redirect to event.index</a>
 
             </div>
