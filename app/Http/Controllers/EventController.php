@@ -52,7 +52,33 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd('ICI ON STORE !', $request, $request->request);
+
+        $validated = $request->validate([
+            'title' => 'required|max:255|string',
+            'content' => 'string|nullable',
+            'start_date' => 'required|date_format:Y-m-d\TH:i',
+            'end_date' => 'required|date_format:Y-m-d\TH:i|after:start_date',
+            'address' => 'required|string',
+            'access' => 'required|string',
+            'instagram_post_link' => 'string|nullable',
+            'facebook_post_link' => 'string|nullable',
+            'creator' => 'string|nullable',
+            'summary' => 'string|nullable',
+        ]);
+
+        // data is validated
+
+        echo("les données entrées sont valides");
+
+        dd($validated);
+
+
+
+
+
+        // return ?
+
     }
 
     /**

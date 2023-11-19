@@ -1,0 +1,52 @@
+/* form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    grid-column: span 2;
+    padding: 10px;
+}
+
+.alert-danger{
+    color: red;
+} */
+
+
+.create-new-event{
+    margin: 0 20% 0 20%;
+}
+
+.alert-danger{
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+label{
+    margin-top: 20px;
+}
