@@ -102,10 +102,10 @@
     color: lightslategray;
 
 
-    max-height: 3.5em;
+    /* max-height: 3.5em; */
 
     position: relative;
-    top: -15px;
+    /* top: -15px; */
 
     overflow: hidden;
 
