@@ -82,7 +82,7 @@
                     <div class="content">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
                         <p class="card-title">{{ $event->title}}</p>
-                        <p class="card-text truncateTextToMaxLength300">{{ $event->description}}</p>
+                        <p class="card-text truncateTextToMaxLength250">{{ $event->description}}</p>
                     </div>
 
                     <a href="{{ route('event.index') }}" class="inner-shadow">Voir le récap</a>
@@ -143,6 +143,19 @@
             // ================= Truncated text WITH '...' ============
             // ========================================================
     
+            // Truncated text for 250 caracters (truncateTextToMaxLength250)
+            const maxLength250 = 250;
+
+            // Get all elements with the specified class
+            const textContainersToMaxLength250 = document.querySelectorAll('.truncateTextToMaxLength250');
+
+            textContainersToMaxLength250.forEach(textContainerToMaxLength250 => {
+                const originalText = textContainerToMaxLength250.textContent.trim();
+                const truncatedTextToMaxLength250 = truncateTextToLength(originalText, maxLength250);
+                textContainerToMaxLength250.innerHTML = truncatedTextToMaxLength250;
+            });
+
+
             // Truncated text for 100 caracters (truncateTextToMaxLength100)
             const maxLength100 = 100;
 
@@ -153,19 +166,6 @@
                 const originalText = textContainerToMaxLength100.textContent.trim();
                 const truncatedTextToMaxLength100 = truncateTextToLength(originalText, maxLength100);
                 textContainerToMaxLength100.innerHTML = truncatedTextToMaxLength100;
-            });
-
-
-            // Truncated text for 300 caracters (truncateTextToMaxLength300)
-            const maxLength300 = 250;
-
-            // Get all elements with the specified class
-            const textContainersToMaxLength300 = document.querySelectorAll('.truncateTextToMaxLength300');
-
-            textContainersToMaxLength300.forEach(textContainerToMaxLength300 => {
-                const originalText = textContainerToMaxLength300.textContent.trim();
-                const truncatedTextToMaxLength300 = truncateTextToLength(originalText, maxLength300);
-                textContainerToMaxLength300.innerHTML = truncatedTextToMaxLength300;
             });
 
 
@@ -180,6 +180,7 @@
                 const truncatedTextToMaxLength15 = truncateTextToLength(originalText, maxLength15);
                 textContainerToMaxLength15.innerHTML = truncatedTextToMaxLength15;
             });
+
 
 
             // ========================================================
