@@ -37,13 +37,17 @@
                             
                             <div>
                                 <h3>{{ $event->title }}</h3>
-                                <p class="truncateTextToMaxLength100">{{ $event->content }}</p>
+                                <p class="truncateTextToMaxLength100">{{ $event->description }}</p>
                             </div>
                         </div>
 
                         <div class="date">
-                            <p class="month truncateTextToMaxLength3">{{ $event->date->format('F')}}</p>
-                            <p class="number">{{ $event->date->format('j')}}</p>
+
+                        <p class="month truncateTextToMaxLength3">{{ $event->date}}</p>
+                            <p class="month truncateTextToMaxLength3">{{ $event->start_date->format('F')}}</p>
+                            <p class="number">{{ $event->start_date->format('j')}}</p>
+
+                            
                         </div>
                     </li>
                 @endforeach
@@ -75,12 +79,11 @@
         <ul class="cards">
             @foreach ($events as $event)
                 <li class="card" id={{ $event->id }}>
-                    <p class="card-date inner-shadow">{{ $event->date->format('j F Y')}}</p>
 
                     <div class="content">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEUA/wAAAADX19cA2wAAVwAAUgAAGgAAWwAASwAAVgAA4gAA3QAARgAAugDU1NT39/cDBq/KAAABK0lEQVR4nO3PiQ2DMADAwAB96bf/tmWJqrrIN4E9LtfTxG7LOu5jZvtxeP53xE9tHfI69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehr0Nfh74OfR36OvR16OvQ16GvQ1+Hvg59Hfo69HXo69DXoa9DX4e+Dn0d+jr0dejr0Nehb/7Dx3H43LeJvY7DZXLvsc7t/fkCwNkSni/v0mIAAAAASUVORK5CYII=" alt="">
                         <p class="card-title">{{ $event->title}}</p>
-                        <p class="card-text truncateTextToMaxLength300">{{ $event->content}}</p>
+                        <p class="card-text truncateTextToMaxLength300">{{ $event->description}}</p>
                     </div>
 
                     <a href="{{ route('event.index') }}" class="inner-shadow">Voir le récap</a>
