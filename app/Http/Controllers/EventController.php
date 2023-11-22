@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Gate;
 
 use App\Models\Event;
+use App\Models\User;
 
 class EventController extends Controller
 {
@@ -46,8 +48,24 @@ class EventController extends Controller
      */
     public function create()
     {
+        $user = auth()->user();
+
+        if ($user->hasRole('admin')) {
+            // dd("user is an admin", $user);
+            return view('pages.events.create');
+
+        } elseif($user->hasRole('writer')) {
+            // dd("user is a writer", $user);
+            return view('event.create');
+
+        }else {
+            // dd("user is not an admin and not a writer", $user);
+            abort(403, 'Unauthorized');
+        }
+
         return view('pages.events.create');
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -55,6 +73,18 @@ class EventController extends Controller
     public function store(Request $request)
     {
         // dd('ICI ON STORE !', $request, $request->request);
+        $user = auth()->user();
+
+        if ($user->hasRole('admin')) {
+            // dd("user is an admin", $user);
+
+        } elseif($user->hasRole('writer')) {
+            // dd("user is a writer", $user);
+
+        }else {
+            // dd("user is not an admin and not a writer", $user);
+            abort(403, 'Unauthorized');
+        }
 
         $validated = $request->validate([
             'title' => 'required|max:255|string',
@@ -89,17 +119,8 @@ class EventController extends Controller
         // Save the event to the database
         $event->save();
 
-        // Optionally, you can redirect the user to a specific page
+        // Redirect the user to a specific page
         return redirect()->route('event.index')->with('success', 'Event created successfully');
-
-        // dd($validated);
-
-
-
-
-
-        // return ?
-
     }
 
     /**

@@ -14,12 +14,12 @@ class Role extends Model
 
 
 
-
+    
     /**
      * Define the many-to-many relationship with User model.
      */
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'user_roles');
     }
 }

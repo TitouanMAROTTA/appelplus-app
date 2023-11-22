@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div>
-                
+
                 <a href="{{ route('event.index') }}">Click me to redirect to event.index</a>
 
             </div>
