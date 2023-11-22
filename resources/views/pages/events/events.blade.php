@@ -138,6 +138,10 @@
             return text;
         }
     }
+
+            // ========================================================
+            // ================= Truncated text WITH '...' ============
+            // ========================================================
     
             // Truncated text for 100 caracters (truncateTextToMaxLength100)
             const maxLength100 = 100;
@@ -150,7 +154,6 @@
                 const truncatedTextToMaxLength100 = truncateTextToLength(originalText, maxLength100);
                 textContainerToMaxLength100.innerHTML = truncatedTextToMaxLength100;
             });
-
 
 
             // Truncated text for 300 caracters (truncateTextToMaxLength300)
@@ -166,6 +169,23 @@
             });
 
 
+            // Truncated text for 15 caracters (truncateTextToMaxLength15)
+            const maxLength15 = 15;
+
+            // Get all elements with the specified class
+            const textContainersToMaxLength15 = document.querySelectorAll('.truncateTextToMaxLength15');
+
+            textContainersToMaxLength15.forEach(textContainerToMaxLength15 => {
+                const originalText = textContainerToMaxLength15.textContent.trim();
+                const truncatedTextToMaxLength15 = truncateTextToLength(originalText, maxLength15);
+                textContainerToMaxLength15.innerHTML = truncatedTextToMaxLength15;
+            });
+
+
+            // ========================================================
+            // ============== Truncated text WITHOUT '...' ============
+            // ========================================================
+
 
             // Truncated text for 3 caracters (truncateTextToMaxLength3)
             const maxLength3 = 3;
@@ -177,18 +197,5 @@
                 const originalText = textContainerToMaxLength3.textContent.trim();
                 const truncatedTextToMaxLength3 = originalText.substring(0, maxLength3);
                 textContainerToMaxLength3.innerHTML = truncatedTextToMaxLength3;
-            });
-
-
-            // Truncated text for 15 caracters (truncateTextToMaxLength15)
-            const maxLength15 = 15;
-
-            // Get all elements with the specified class
-            const textContainersToMaxLength15 = document.querySelectorAll('.truncateTextToMaxLength15');
-
-            textContainersToMaxLength15.forEach(textContainerToMaxLength15 => {
-                const originalText = textContainerToMaxLength15.textContent.trim();
-                const truncatedTextToMaxLength15 = originalText.substring(0, maxLength15);
-                textContainerToMaxLength15.innerHTML = truncatedTextToMaxLength15;
             });
 </script>
