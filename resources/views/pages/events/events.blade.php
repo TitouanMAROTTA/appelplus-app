@@ -11,9 +11,8 @@
 
 
     <!-- ======================= -->
-    @if (1)
-        
-        
+    @if ($authorized === true)
+    
         <a href="{{ route('event.create') }}" class="inner-shadow">Créer un évènement</a>
 
         @isset($success)

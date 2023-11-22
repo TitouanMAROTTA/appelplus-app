@@ -16,8 +16,6 @@ class EventController extends Controller
      */
     // public function index()
     // {
-    //     // return view('pages.events.events', ['events' => auth()->user()->events]);
-
     //     return view('pages.events.events', ['events' => 
     //         [
     //             (object)[
@@ -56,11 +54,12 @@ class EventController extends Controller
             $event->end_date = Carbon::parse($event->end_date);
             return $event;
         });
+        
+        // Set the variable 'authorized' to 'true' if the user is an admin or a writer
+        $user = auth()->user();
+        $authorized = $user->hasRole('admin') || $user->hasRole('writer');
 
-
-        // dd($events);
-
-        return view('pages.events.events', ['events' => $events]);
+        return view('pages.events.events', compact('events', 'authorized'));
     }
 
 
@@ -77,7 +76,7 @@ class EventController extends Controller
 
         } elseif($user->hasRole('writer')) {
             // dd("user is a writer", $user);
-            return view('event.create');
+            return view('pages.events.create');
 
         }else {
             // dd("user is not an admin and not a writer", $user);
