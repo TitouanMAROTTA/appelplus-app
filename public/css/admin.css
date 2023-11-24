@@ -2,6 +2,10 @@
     margin: 0 13% 0 13%;
 }
 
+.evenements-list-admin form{
+    margin: 0;
+}
+
 .evenements-list-admin table{
     display: flex;
     justify-content: center;
