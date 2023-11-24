@@ -1,0 +1,29 @@
+.evenements-list-admin{
+    margin: 0 13% 0 13%;
+}
+
+.evenements-list-admin table{
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(236, 236, 236);
+
+    margin-top: 100px;
+}
+
+.evenements-list-admin table td{
+    height: 40px;
+}
+
+.margin-right40px{
+    margin-right: 40px;
+}
+
+.text-centered{
+    /* text-align: center; */
+    align-items: center;
+}
+
+.table-explanation{
+    border-bottom: solid;
+}

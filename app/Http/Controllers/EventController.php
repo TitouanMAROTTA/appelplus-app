@@ -68,22 +68,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        $user = auth()->user();
-
-        if ($user->hasRole('admin')) {
-            // dd("user is an admin", $user);
-            return view('pages.events.create');
-
-        } elseif($user->hasRole('writer')) {
-            // dd("user is a writer", $user);
-            return view('pages.events.create');
-
-        }else {
-            // dd("user is not an admin and not a writer", $user);
-            abort(403, 'Unauthorized');
-        }
-
-        return view('pages.events.create');
+        // 
     }
     
 
@@ -92,55 +77,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('ICI ON STORE !', $request, $request->request);
-        $user = auth()->user();
-
-        if ($user->hasRole('admin')) {
-            // dd("user is an admin", $user);
-
-        } elseif($user->hasRole('writer')) {
-            // dd("user is a writer", $user);
-
-        }else {
-            // dd("user is not an admin and not a writer", $user);
-            abort(403, 'Unauthorized');
-        }
-
-        $validated = $request->validate([
-            'title' => 'required|max:255|string',
-            'content' => 'string|nullable',
-            'start_date' => 'required|date_format:Y-m-d\TH:i',
-            'end_date' => 'required|date_format:Y-m-d\TH:i|after:start_date',
-            'address' => 'required|string',
-            'access' => 'required|string',
-            'instagram_post_link' => 'string|nullable',
-            'facebook_post_link' => 'string|nullable',
-            'creator' => 'string|nullable',
-            'summary' => 'string|nullable',
-        ]);
-
-        // echo("les données entrées sont valides");
-
-        // Create a new Event instance
-        $event = new Event();
-
-        // Set the attributes
-        $event->title = $validated['title'];
-        $event->description = $validated['content'];
-        $event->start_date = $validated['start_date'];
-        $event->end_date = $validated['end_date'];
-        $event->address = $validated['address'];
-        $event->access = $validated['access'];
-        $event->instagram_post_link = $validated['instagram_post_link'];
-        $event->facebook_post_link = $validated['facebook_post_link'];
-        $event->creator = $validated['creator'];
-        $event->summary = $validated['summary'];
-
-        // Save the event to the database
-        $event->save();
-
-        // Redirect the user to a specific page
-        return redirect()->route('event.index')->with('success', 'Event created successfully');
+        // 
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventAdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('event', EventController::class)->only(['index', 'create', 'store']); //->only(['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']);
+    Route::resource('event', EventController::class)->only(['index']);
+
+    Route::resource('eventadmin', EventAdminController::class)->only(['index', 'create', 'store', 'destroy']); //->only(['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']);
 });
 
 require __DIR__.'/auth.php';

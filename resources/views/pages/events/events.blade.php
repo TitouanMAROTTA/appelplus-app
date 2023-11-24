@@ -3,7 +3,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Evenements à venir') }}
+            {{ __('Evenement gestion') }}
         </h2>
     </x-slot>
 
@@ -13,7 +13,8 @@
     <!-- ======================= -->
     @if ($authorized === true)
     
-        <a href="{{ route('event.create') }}" class="inner-shadow">Créer un évènement</a>
+        <!-- Renvoie vers la page "de gestion des evenements" -->
+        <a href="{{ route('eventadmin.index') }}" class="inner-shadow">Gérer les évènements</a>
 
         @isset($success)
             <p class="success">{{ $success }}</p>
