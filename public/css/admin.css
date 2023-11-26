@@ -26,6 +26,7 @@
 .text-centered{
     /* text-align: center; */
     align-items: center;
+    display: flex;
 }
 
 .table-explanation{
