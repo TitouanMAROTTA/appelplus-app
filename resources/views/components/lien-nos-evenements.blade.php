@@ -1,0 +1,1 @@
+<a href="{{ route('event.index') }}">{{ $slot }}</a>

@@ -1,0 +1,98 @@
+/* couleurs tableau : Gris plus foncé : #CCCCC Gris plus clair : E0DEDE
+/* Paragraphe Accueillir*/
+.p1 h2{
+    background-color: #E05257;
+    color: white;
+}
+
+/* Paragraphe Informer*/
+.p2 h2{
+    background-color: #E37A30;
+    color: white;
+}
+
+/* Paragraphe Lutter*/
+.p3 h2{
+    background-color: #6BE059;
+    color: white;
+}
+
+/* Paragraphe Soutenir*/
+.p4 h2{
+    background-color: #993FD1;
+    color: white;
+}
+/* espacement entre mes p*/
+
+main .qui-sommes-nous{
+    margin: 2% 20%;
+}
+
+main .qui-sommes-nous p:first-child{
+    margin-bottom: 2%;
+}
+
+/* taille de mes titres*/
+h2{
+    font-size: 1em;
+    margin: 2em 0 1em 0;
+}
+
+/* Tableau avec formule d'abonnement */
+tr {
+  border-bottom: solid 1px white;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    
+    }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th,
+  td {
+    padding: 20px;
+  }
+
+  thead th {
+    background-color: #CCCC;
+}
+
+#formule{
+    text-align: left;
+  }
+
+#montant{
+    text-align: right;
+  }
+
+tbody th{
+    font-weight: normal;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #E0DEDE;
+    text-align: right;
+}
+
+.tableau {
+  border-spacing: 10px;
+}
+

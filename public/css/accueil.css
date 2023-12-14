@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+  img{
+    max-width: 100%;
+  }
+  li{
+    list-style: none;
+  }
+  h1, h2, h3{
+    font-weight: 500;
+  }
+  h2{
+    padding-top: 100px;
+  }
+  
+  
+  /* centrer horizontalement */
+  main section:not(main section:nth-of-type(2)) {
+    width: 900px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  /* bannière */
+  .banniere{
+    background-image: url(../images/fond_accueil.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+  .banniere div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28vh;
+    padding-top: 50vh;
+  }
+  .btn-blanc{
+    border: 2px solid white;
+    font-size: 18px;
+  }
+  .banniere a{
+    color: white;
+  }
+  .banniere img{
+    height: 6vh;
+    transition: transform 0.1s;
+  }
+  .banniere img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+  }
+  
+  
+  /* section présentation */
+  .presentation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+    padding:50px 0 100px 0; 
+  }
+  .presentation h1{
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+  }
+  .presentation div p{
+   padding-bottom: 30px;
+  }
+  
+  
+  /* section soutenir l'association */
+  .soutenir{
+    background-color: #F0F0F0;
+    padding: 50px 0 70px 0;
+  }
+  .soutenir h2, .soutenir ul{
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .soutenir ul{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+  }
+  
+  .btn{
+    font-size: 19px;
+    padding: 10px 40px;
+    background: white;
+    border: 2px solid #E05257;
+    transition: background 0.2s;
+  }
+  .btn a{
+    color: #E05257;
+    font-weight: 500;
+  }
+  .btn:hover{
+    background: #E05257;
+    transition: background 0.2s;
+  }
+  .btn:hover a{
+    color: white;
+  }
+  /* premier boutton au fond rouge*/
+  .btn-rouge {
+    background: #E05257;
+    border: 2px solid #E05257;
+    transition: background 0.2s;
+  }
+  .btn-rouge a{
+    color: white;
+  }
+  .btn-rouge:hover {
+    background: white;
+    transition: background 0.2s;
+  }
+  .btn-rouge:hover a{
+    color: #E05257;
+  }
+  /* troisième boutton au fond blanc */
+  .btn-fond-blanc{
+    border: none;
+  }
+  
+  /* mise en page à 3 colonnes */
+  .trois-colonnes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+  }
+  .trois-colonnes h2{
+    grid-column: span 3;
+  }
+  .trois-colonnes > div{
+    grid-column: span 3;
+    text-align: center;
+  }
+  .trois-colonnes figure{
+    height: 153px;
+  }
+  .trois-colonnes img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  /* section événements */
+  .evenements figure{
+    position: relative;
+  }
+  .evenements figure figcaption{
+    visibility: hidden;
+    opacity: 0;
+  }
+  .evenements figure:hover figcaption{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(224, 82, 87, 0.8);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 5px;
+  }
+  .evenements figcaption p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 3rem;
+    text-align: right;
+    font-weight: 500;
+  }
+  .evenements figcaption p:first-child{
+    align-self: end;
+  }
+  .evenements figcaption p:nth-child(2){
+    grid-row: 2 span;
+    font-size: 7.7rem;
+    padding-right: 10px;
+    align-self: center;
+    text-align: left;
+  }
+  
+  
+  /* section actualités */
+  .actualites{
+    padding-bottom: 100px;
+  }
+  .actualites h3{
+    padding: 10px 0;
+  }

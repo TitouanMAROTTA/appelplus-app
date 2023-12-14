@@ -1,0 +1,107 @@
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+h3{
+    font-weight: 550;
+    font-size: 18px;
+}
+h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 2rem;
+    font-size: 14px;
+}
+figure img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    
+}
+/*ajustements*/
+body{
+    margin: 0;
+}
+/*test pour marges, centrage*/
+main .introduction{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+/* main .bureau{
+    margin: 0 auto;
+    max-width: 1000px;
+} */
+/*galerie*/
+.galerie {
+    padding: 0%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.galerie img {
+    width: 140px;
+    height: 140px;
+
+    padding: 5px;
+}
+
+
+/* Articles */
+.nosval,
+.bureau{
+    margin: 5% auto;
+    max-width: 1000px;
+
+    justify-content: space-evenly;
+}
+
+/* Articles h3 */
+.nosval h3,
+.bureau h3{
+    padding-top: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+
+
+.picto {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+    /* justify-content: center; */
+    padding: 0 0 5% 0;
+}
+
+.picto figcaption {
+    text-align: center;
+}
+.picto img {
+    width: 70px;
+    height: 70px;
+}
+/*fond toute la page*/
+.valeurs{
+    background-color: #f9efef;
+    background-size: 100%;
+    
+}
+.nosval>div{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+

@@ -1,0 +1,216 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#footer{
+    position:absolute;
+    width:100%;
+    height:100px;   /* Hauteur du pied de page */
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+.first ul li{
+  display:inline-block;
+  list-style-type: none;
+  grid-area: buttons;
+}
+
+h5{
+  grid-area: text;
+  font-size: 1em;
+  text-align: right;
+}
+
+.first{ 
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto;
+  grid-template-areas: " text buttons";
+  align-items: center;
+  justify-content: center;
+  width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+/* bouton faire un don*/
+
+.give-button{
+  background-color: transparent;
+  padding: 0.6rem 0.8rem;
+  margin-left: 2vw;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #E05257;
+  border: 1.5px solid #E05257;
+
+}
+.give-button:hover {
+  color: #E05257;
+  background-color: #fff;
+  transition: all ease-in-out 350ms;
+}
+
+/*bouton adhérer*/
+
+.join-button{
+  background-color: #fff;
+  border: 1.5px solid #E05257;
+  padding: 0.6rem 0.8rem;
+  margin-left: 2vw;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #E05257;
+
+}
+.join-button:hover {
+  color: #ffffff;
+  background-color: #E05257;
+  transition: all ease-in-out 350ms;
+}
+
+.footer-address {
+    grid-area: logo;
+    margin-left: 30px;
+}
+
+.footer-address img {
+    max-width: 60%;
+}
+
+.address{
+    font-size: 0.9rem;
+}
+
+.second{
+    align-items: center;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: " logo links connexion";
+    align-items: center;
+    justify-content: center;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-top: 30px;
+}
+
+.footer-widget {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 40px;
+  position: relative;
+  margin-left: 100px;
+  grid-area: links;
+}
+.footer-widget::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  height: 3px;
+  width: 50px;
+  background: linear-gradient(90deg,
+  #E05257 0%,
+  #E05257 17%,
+  #E37A30  17%,
+  #E37A30  34%,
+  #E9B840 34%,
+  #E9B840 51%,
+  #6BE059 51%,
+  #6BE059 68%,
+  #376ED5 68%,
+  #376ED5 85%,
+  #993FD1 85%,
+  #993FD1 100%);
+}
+
+.footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+.footer-widget ul li a:hover{
+  color: #E05257;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.external{
+  background: #d6d6d6;
+  padding: 25px 0;
+}
+.copyright-text{
+  margin: 0;
+  font-size: 0.8rem;
+  color: #878787;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin-left: 1%;
+}
+.footer-menu li:hover a{
+  color: #E05257;
+}
+.footer-menu li a {
+  font-size: 0.8rem;
+  color: #878787;
+}
+
+.footer-menu li:first-of-type{
+  margin-right: 60%;
+}
+
+.sous-menu{
+  display: inline-block;
+}
+
+.wrap {
+ grid-area: contact-button;
+}
+
+.wrap a {
+ -webkit-transition: all 500ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+ -moz-transition: all 500ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+ -ms-transition: all 500ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+ -o-transition: all 500ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+ transition: all 500ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+ display: block;
+ margin: 20px auto;
+ max-width: 180px;
+ text-decoration: none;
+ padding: 10px 20px;
+ text-align: center;
+}
+
+a.black_button {
+ color: rgb(0, 0, 0);
+ box-shadow: rgba(0, 0, 0) 0 0px 0px 2px inset;
+}
+
+a.black_button:hover {
+ color: rgba(255, 255, 255, 0.85);
+ box-shadow: rgba(0, 0, 0) 0 0px 0px 40px inset;
+}
+
+#connexion{
+  grid-area: connexion;
+}

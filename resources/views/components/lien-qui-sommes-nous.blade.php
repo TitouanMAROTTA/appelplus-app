@@ -1,0 +1,1 @@
+<a href="qui-sommes-nous">{{ $slot }}</a>

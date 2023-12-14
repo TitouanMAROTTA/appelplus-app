@@ -1,0 +1,230 @@
+#header{
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    color: #111111;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 12px;
+    position: relative;
+}
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+li { 
+    cursor: pointer;
+  }
+  
+  /*position de l'élèment*/
+  .nav-links li a {
+      display: inline-block;
+      position: relative;
+      padding: 15px;
+      text-decoration: none;  
+  }
+  
+  /*Positionnement et timing de la partie animée*/
+  .nav-links li a::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -1.2rem;
+      height: 4px;
+      width: 0;
+      transition: width 0s ease, background .5s ease;
+  }
+  
+  /*paramètres de l'animation en sortie*/
+    .nav-links li a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -1.2rem;
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg,
+      #E05257 0%,
+      #E05257 17%,
+      #E37A30  17%,
+      #E37A30  34%,
+      #E9B840 34%,
+      #E9B840 51%,
+      #6BE059 51%,
+      #6BE059 68%,
+      #376ED5 68%,
+      #376ED5 85%,
+      #993FD1 85%,
+      #993FD1 100%);
+      transition: width .5s ease;
+  }
+  
+  
+  /*paramètres de l'animation en entrée*/
+  .nav-links li a:hover::before {
+      width: 100%;
+      background: linear-gradient(90deg,
+      #E05257 0%,
+      #E05257 17%,
+      #E37A30 17%,
+      #E37A30 34%,
+      #E9B840 34%,
+      #E9B840 51%,
+      #6BE059 51%,
+      #6BE059 68%,
+      #376ED5 68%,
+      #376ED5 85%,
+      #993FD1 85%,
+      #993FD1 100%);
+      transition: width .5s ease;
+  }
+  
+  
+  .nav-links li a:hover:after {
+      width: 100%;
+      background: transparent;
+      transition: all 0s ease;
+  }
+  
+  
+  
+
+/*styling button*/
+
+.give-button{
+    background-color: transparent;
+    border: 1.5px solid #E05257;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #E05257;
+
+}
+.give-button:hover {
+    color: #ffffff;
+    background-color: #E05257;
+    transition: all ease-in-out 350ms;
+}
+
+
+/*style menu burger*/
+
+.burger_menu div{
+    width: 30px;
+    height:3px;
+    background: #989898;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.burger_menu{
+    display: none;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1200px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .burger_menu{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #ffffff;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animation menu burger --> script JS*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}

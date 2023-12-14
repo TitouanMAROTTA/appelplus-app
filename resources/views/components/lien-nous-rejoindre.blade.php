@@ -1,0 +1,1 @@
+<a href="nous-rejoindre">{{ $slot }}</a>
