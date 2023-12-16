@@ -18,6 +18,38 @@ use Illuminate\Support\Facades\Route;
 
 
 
+// No need to be connected to an account to access theses pages
+Route::get('/', function () {
+    return view('accueil');
+});
+
+
+Route::get('nous-rejoindre', function () {
+    return view('pages/nous-rejoindre');
+});
+
+
+Route::resource('event', EventController::class)->only(['index']);
+
+
+Route::get('qui-sommes-nous', function () {
+    return view('pages/qui-sommes-nous');
+});
+
+
+Route::get('l-actualite', function () {
+    return view('pages/l-actualite');
+});
+
+
+Route::get('nous-contacter', function () {
+    return view('pages/nous-contacter');
+});
+
+
+
+
+// Need to be connected to an account to access theses pages
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -27,30 +59,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('event', EventController::class)->only(['index']);
 
     Route::resource('eventadmin', EventAdminController::class)->only(['index', 'create', 'store', 'destroy']); //->only(['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']);
-
-    Route::get('/', function () {
-        // return view('welcome');
-        return view('accueil');
-    });
-
-    Route::get('qui-sommes-nous', function () {
-        return view('pages/qui-sommes-nous');
-    });
-
-    Route::get('nous-rejoindre', function () {
-        return view('pages/nous-rejoindre');
-    });
-
-    Route::get('l-actualite', function () {
-        return view('pages/l-actualite');
-    });
-
-    Route::get('nous-contacter', function () {
-        return view('pages/nous-contacter');
-    });
 
 });
 

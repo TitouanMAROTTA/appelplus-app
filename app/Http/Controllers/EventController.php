@@ -55,9 +55,14 @@ class EventController extends Controller
             return $event;
         });
         
-        // Set the variable 'authorized' to 'true' if the user is an admin or a writer
+        // Set the variable 'authorized' to 'true' if the user is an admin or a writer (if there is a user)
         $user = auth()->user();
-        $authorized = $user->hasRole('admin') || $user->hasRole('writer');
+        if($user){
+            $authorized = $user->hasRole('admin') || $user->hasRole('writer');
+        }
+        else{
+            $authorized = false;
+        }
 
         return view('pages.events.events', compact('events', 'authorized'));
     }

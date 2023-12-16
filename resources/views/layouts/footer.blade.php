@@ -27,7 +27,7 @@
             <p class="address">8 rue de l'égalité</p>
                 <p class="address">86000 POITIERS</p>
                 <div class="wrap">
-                    <a href="#" class="black_button">Nous contacter</a>
+                    <x-lien-nous-contacter></x-lien-nous-contacter>class="black_button">Nous contacter</a>
                 </div>
             </div>
             <!--<div class="footer-social-icon">
@@ -48,20 +48,20 @@
             <div id="connexion">
                 <p>Déjà adhérent ?  Je me connecte !</p>
                 <div class="wrap">
-                    <a href="#" class="black_button">Me connecter</a>
+                    <x-lien-login></x-lien-login>class="black_button">Me connecter</a>
                 </div>
             </div>
         </div>
             <div class="external">
                 <div class="container">
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><p class="copyright-text">Copyright &copy; 2023 All Right Reserved Appel+</p></li>
-                                    <li><a href="/">Accueil</a></li>
-                                    <li><a href="#">Mentions Légales</a></li>
-                                    <li><x-lien-nous-contacter>Contact</x-lien-nous-contacter></li>
-                                </ul>
-                            </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><p class="copyright-text">Copyright &copy; 2023 All Right Reserved Appel+</p></li>
+                            <li><a href="/">Accueil</a></li>
+                            <li><a href="#">Mentions Légales</a></li>
+                            <li><x-lien-nous-contacter></x-lien-nous-contacter>>Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>

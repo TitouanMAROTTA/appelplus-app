@@ -32,8 +32,6 @@ class EventAdminController extends Controller
             // dd("user is not an admin and not a writer", $user);
             abort(403, 'Unauthorized');
         }
-
-        // return view('pages.events.index');
     }
 
     /**
@@ -65,7 +63,7 @@ class EventAdminController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('ICI ON STORE !', $request, $request->request);
+        // dd('on store', $request, $request->request);
         $user = auth()->user();
 
         if ($user->hasRole('admin')) {

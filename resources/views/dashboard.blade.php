@@ -1,4 +1,4 @@
-<!-- <x-app-layout>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -12,11 +12,6 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
-            <div>
-
-                <a href="{{ route('event.index') }}">Click me to redirect to event.index</a>
-
-            </div>
         </div>
     </div>
-</x-app-layout> -->
+</x-app-layout>

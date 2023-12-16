@@ -1,1 +1,1 @@
-<a href="nous-contacter">{{ $slot }}</a>
+<a href="nous-contacter"
