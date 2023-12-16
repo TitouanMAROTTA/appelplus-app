@@ -46,6 +46,10 @@ Route::get('nous-contacter', function () {
     return view('pages/nous-contacter');
 });
 
+Route::get('mentions-legales', function () {
+    return view('pages/mentions-legales');
+});
+
 
 
 

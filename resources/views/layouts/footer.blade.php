@@ -58,7 +58,7 @@
                         <ul>
                             <li><p class="copyright-text">Copyright &copy; 2023 All Right Reserved Appel+</p></li>
                             <li><a href="/">Accueil</a></li>
-                            <li><a href="#">Mentions Légales</a></li>
+                            <li><x-lien-mentions-legales>Mentions Légales</x-lien-mentions-legales></li>
                             <li><x-lien-nous-contacter></x-lien-nous-contacter>>Contact</a></li>
                         </ul>
                     </div>
