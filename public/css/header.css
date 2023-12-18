@@ -43,89 +43,80 @@ nav{
     font-size: 1rem;
     text-transform: uppercase;
 }
+  
+/*position de l'élément*/
+.nav-links li a {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    text-decoration: none;  
+}
 
-li { 
-    cursor: pointer;
-  }
-  
-  /*position de l'élèment*/
-  .nav-links li a {
-      display: inline-block;
-      position: relative;
-      padding: 15px;
-      text-decoration: none;  
-  }
-  
-  /*Positionnement et timing de la partie animée*/
-  .nav-links li a::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -1.2rem;
-      height: 4px;
-      width: 0;
-      transition: width 0s ease, background .5s ease;
-  }
-  
-  /*paramètres de l'animation en sortie*/
-    .nav-links li a:after {
-      content: '';
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -1.2rem;
-      height: 4px;
-      width: 0;
-      background: linear-gradient(90deg,
-      #E05257 0%,
-      #E05257 17%,
-      #E37A30  17%,
-      #E37A30  34%,
-      #E9B840 34%,
-      #E9B840 51%,
-      #6BE059 51%,
-      #6BE059 68%,
-      #376ED5 68%,
-      #376ED5 85%,
-      #993FD1 85%,
-      #993FD1 100%);
-      transition: width .5s ease;
-  }
-  
-  
-  /*paramètres de l'animation en entrée*/
-  .nav-links li a:hover::before {
-      width: 100%;
-      background: linear-gradient(90deg,
-      #E05257 0%,
-      #E05257 17%,
-      #E37A30 17%,
-      #E37A30 34%,
-      #E9B840 34%,
-      #E9B840 51%,
-      #6BE059 51%,
-      #6BE059 68%,
-      #376ED5 68%,
-      #376ED5 85%,
-      #993FD1 85%,
-      #993FD1 100%);
-      transition: width .5s ease;
-  }
-  
-  
-  .nav-links li a:hover:after {
-      width: 100%;
-      background: transparent;
-      transition: all 0s ease;
-  }
-  
-  
-  
+/*Positionnement et timing de la partie animée*/
+.nav-links li a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1.2rem;
+    height: 4px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
 
+/*paramètres de l'animation en sortie*/
+.nav-links li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -1.2rem;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg,
+    #E05257 0%,
+    #E05257 17%,
+    #E37A30  17%,
+    #E37A30  34%,
+    #E9B840 34%,
+    #E9B840 51%,
+    #6BE059 51%,
+    #6BE059 68%,
+    #376ED5 68%,
+    #376ED5 85%,
+    #993FD1 85%,
+    #993FD1 100%);
+    transition: width .5s ease;
+}
+  
+/*paramètres de l'animation en entrée*/
+.nav-links li a:hover::before {
+    width: 100%;
+    background: linear-gradient(90deg,
+    #E05257 0%,
+    #E05257 17%,
+    #E37A30 17%,
+    #E37A30 34%,
+    #E9B840 34%,
+    #E9B840 51%,
+    #6BE059 51%,
+    #6BE059 68%,
+    #376ED5 68%,
+    #376ED5 85%,
+    #993FD1 85%,
+    #993FD1 100%);
+    transition: width .5s ease;
+}
+
+.nav-links li a:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+  
 /*styling button*/
-
-.give-button{
+.give-button {
+    position: relative;
     background-color: transparent;
     border: 1.5px solid #E05257;
     padding: 0.6rem 0.8rem;
@@ -133,16 +124,63 @@ li {
     font-size: 1rem;
     cursor: pointer;
     color: #E05257;
-
-}
-.give-button:hover {
-    color: #ffffff;
-    background-color: #E05257;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     transition: all ease-in-out 350ms;
 }
 
+.give-button img {
+    width: auto;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 50px;
+    transition: all ease-in-out 350ms;
+}
+
+.give-button span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Applique une opacité de 1 à l'image initiale et de 0 à l'image avec couleurs inversées */
+.give-button:hover .button-image {
+    opacity: 0;
+}
+
+.give-button:hover .button-image-hover {
+    opacity: 1;
+}
+
+/* Assure que l'image avec couleurs inversées (pour la cohérence pendant le hover) est initialement invisible */
+.button-image-hover {
+    position: absolute;
+    top: 5;
+    left: 50;
+    opacity: 0;
+}
+
+.give-button:hover {
+    background-color: #E05257;
+}
+
+.give-button:hover .button-image {
+    opacity: 0;
+}
+
+.give-button:hover .button-image-hover {
+    opacity: 1;
+}
+
+.round-button {
+    border-radius: 50px;
+}
 
 /*style menu burger*/
+.burger_menu{
+    display: none;
+}
 
 .burger_menu div{
     width: 30px;
@@ -151,9 +189,7 @@ li {
     margin: 5px;
     transition: all 0.3s ease;
 }
-.burger_menu{
-    display: none;
-}
+
 
 /*Responsive*/
 @media screen and (max-width: 1200px){

@@ -11,17 +11,17 @@
 
 <body>
     <div class="external">
-        <div class="container first">
+        <div class="footer-container first">
             <h5>Envie d'apporter votre soutien à l'association ?</h5>
             <ul>
                 <li><button class="give-button" href="#">Faire un don</button></li>
-                <li><button class="join-button" href="#">Devenir adhérent</button></li>
+                <li><button class="join-button"><x-lien-nous-rejoindre>Devenir adhérent</x-lien-nous-rejoindre></button></li>
             </ul>
         </div>
     </div>
 
     <footer class="footer-section">
-        <div class="container second">
+        <div class="footer-container second">
             <div class="footer-address">
                 <a href="/"><img src="{{ asset('images/logo-APPEL.svg') }}" class="img-fluid" alt="logo"></a>
             <p class="address">8 rue de l'égalité</p>
@@ -53,7 +53,7 @@
             </div>
         </div>
             <div class="external">
-                <div class="container">
+                <div class="footer-container">
                     <div class="footer-menu">
                         <ul>
                             <li><p class="copyright-text">Copyright &copy; 2023 All Right Reserved Appel+</p></li>

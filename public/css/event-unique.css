@@ -1,0 +1,106 @@
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+
+main>* {
+    padding:20px;
+    padding-top: 75px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky; 
+    top: 0px;
+}
+
+aside>img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+aside>div {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    font-family:Helvetica, sans-serif;
+    color: #333333;
+}
+
+h1 {
+    font-size: x-large;
+    color: #E05257;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    margin: 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+main a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.participer {
+    background-color: #E05257;
+    text-transform: uppercase;
+}
+
+.instagram {
+    background-color: #E05257;
+    /* Peut être modifié selon le vrai bleu d'Instagram */
+}
+
+.facebook {
+    background-color: #1877f2;
+    /* Couleur officielle de Facebook */
+}
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.spaced {
+    margin-top: 30px;
+}
+
+h2>img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.spaced p>img {
+    display: inline;
+    margin-left: 5px;
+    max-width: 30px;
+    max-height: 30px;
+}

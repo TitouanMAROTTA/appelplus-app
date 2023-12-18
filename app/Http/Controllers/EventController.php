@@ -39,17 +39,29 @@ class EventController extends Controller
     //         ],
     //     ]);
     // }
+
     public function index()
     {
         $currentTime = Carbon::now();
 
-        $events = Event::where('end_date', '>', $currentTime)
+        $eventsFuture = Event::where('end_date', '>', $currentTime)
             ->orderBy('start_date', 'asc')
             ->take(3)
             ->get();
 
+        $eventsPast = Event::where('end_date', '<', $currentTime)
+            ->orderBy('end_date', 'desc')
+            ->take(3)
+            ->get();
+
         // Convert start_date and end_date strings to Carbon instances for formatting
-        $events = $events->map(function ($event) {
+        $eventsFuture = $eventsFuture->map(function ($event) {
+            $event->start_date = Carbon::parse($event->start_date);
+            $event->end_date = Carbon::parse($event->end_date);
+            return $event;
+        });
+        
+        $eventsPast = $eventsPast->map(function ($event) {
             $event->start_date = Carbon::parse($event->start_date);
             $event->end_date = Carbon::parse($event->end_date);
             return $event;
@@ -64,9 +76,8 @@ class EventController extends Controller
             $authorized = false;
         }
 
-        return view('pages.events.events', compact('events', 'authorized'));
+        return view('pages.events.events', compact('eventsFuture', 'eventsPast', 'authorized'));
     }
-
 
     /**
      * Show the form for creating a new resource.

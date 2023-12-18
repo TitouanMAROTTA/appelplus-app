@@ -7,39 +7,27 @@
     background-color: #DFF2
 }
 
-
-
-
-
 .evenements{
     font-family: "Gill Sans", sans-serif;
-
     margin: 0 13% 0 13%;
 }
 
+.evenements h2{
+    font-size: x-large;
+    font-weight: bold;
+}
 
-
-
-
-.evenements-a-venir-main{
-    /* background-color: lightblue; */
-    
+.evenements-a-venir-main{    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-
-
 .evenements-a-venir-secondary-container{
     width: 100%;
 }
 
-
-
-.evenements-a-venir-secondary{
-    /* background-color: lightblue; */
-    
+.evenements-a-venir-secondary{    
     display: grid;
     align-items: end;
     
@@ -48,11 +36,6 @@
 
     justify-items: end;
 }
-
-
-
-
-
 
 .events{
     text-transform: uppercase;
@@ -70,7 +53,6 @@
     justify-content: space-between;
 
     margin-bottom: 25px;
-
 }
 
 .events li img{
@@ -84,18 +66,16 @@
 .events li h3{
     font-size: 2rem;
 
-    color: rgb(236, 73, 73);
-
     letter-spacing: -0.2rem;
 }
 
 .events .left_side{
     display: flex;
     align-items: center;
+    width: 500px;
 }
 
 .events .left_side p{
-
     height: 75px;
     width: 100%;
 
@@ -116,8 +96,11 @@
     margin: 0 20px 0 20px;
 
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 22%;
 
     color: rgb(236, 73, 73);
 }
@@ -140,7 +123,6 @@
 
     height: 100%;
 
-
     transform: scale(1, 1.5);
     /* Safari and Chrome */
     -webkit-transform: scale(1, 1.5);
@@ -152,33 +134,19 @@
     -o-transform: scale(1, 1.5);
 }
 
-
-
-
 .evenements-a-venir .gros_carre_gris{
     height: 100%;
     width: 75%;
 
-    background-color: rgb(236, 236, 236);
+    /* background-color: rgb(236, 236, 236); */
 }
-
-
-
 
 .evenements-a-venir .petit_carre_gris{
     height: 50%;
     width: 75%;
 
-    background-color: rgb(236, 236, 236);
+    /* background-color: rgb(236, 236, 236); */
 }
-
-
-
-
-
-
-
-
 
 .evenements-passes .cards{
     display: flex;
@@ -215,12 +183,24 @@
     padding: 10px;
     margin-bottom: 10px;
 
-    background-color: rgb(236, 73, 73);
+    /* background-color: rgb(236, 73, 73); */
     border-radius: 3px;
 
     text-decoration: none;
 
     color: white;
+}
+
+.redBackground {
+    background-color: #e05257;
+}
+
+.yellowBackground {
+    background-color: #e9b840;
+}
+
+.greenBackground {
+    background-color: #6be059;
 }
 
 .evenements-passes .card .card-date{
@@ -257,17 +237,102 @@
     min-height: 475px;
 }
 
+.events .card .content .card-title-container {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
 .evenements-passes .card .content .card-title{
-    color: rgb(236, 73, 73);
+    margin: 0;
     font-weight: bold;
-
     font-size: 1.2rem;
-
-    margin-top: 1rem;
+    /* margin-top: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; */
+    text-overflow: ellipsis;
+    overflow: hidden; 
 }
 
 .evenements-passes .card .content .card-text{
     color: lightslategray;
-
     font-size: 1rem;
 }
+
+.events .event-item {
+    display: flex;
+    align-items: center;
+}
+
+.event-details {
+    margin-right: 10px;
+}
+
+.events .short-text-container-500px {
+    width: 500px;
+}
+
+.events .short-text-container-250px {
+    width: 250px;
+    position: relative;
+}
+
+.events .short-text-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.events .short-text-description {
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    position: relative;
+    z-index: 1;
+}
+
+.events .short-text-description::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:108%;
+    height: 3.5em;
+    background: linear-gradient(to bottom, rgba(236, 236, 236, 0), rgba(236, 236, 236, 1));
+}    
+
+.events .red {
+    color: #e05257;
+}
+
+.events .yellow {
+    color: #e9b840;
+}
+
+.events .green {
+    color: #6be059;
+}
+
+.red {
+    color: #e05257;
+}
+
+.yellow {
+    color: #e9b840;
+}
+
+.green {
+    color: #6be059;
+}
+
+.img-center-container {
+    text-align: center;
+}
+
+.img-center-container img {
+    margin: auto;
+    display: block;
+}
+  

@@ -50,6 +50,9 @@ Route::get('mentions-legales', function () {
     return view('pages/mentions-legales');
 });
 
+Route::get('event-unique', function () {
+    return view('pages/event-unique');
+});
 
 
 

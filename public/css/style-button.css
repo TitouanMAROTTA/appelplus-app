@@ -1,0 +1,158 @@
+
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display: table;
+    width: 100%;
+  }
+  .btn-3 .container{
+    display: table-cell; /* pour faire un tableaux si plusieurs button */
+    vertical-align: middle;
+    text-align: center;
+    height: calc(100vh - 76px); /*taille du bouton */
+  }
+  
+  .btn-3 button{
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    background: none;
+    border: 4px solid black;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px 30px;
+    transition-delay: 0.5s 0.5s;
+  }
+  
+  .btn-3 button:hover{
+      border: none;
+      transition-delay: 0.5s 0.5s;
+      cursor: pointer;
+  }
+  
+  .btn-3 a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*contour du haut*/
+  .btn-3 button::before{
+    content:"";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background:linear-gradient(90deg,
+      #376ED5 0%,
+      #376ED5 50%,
+      #6BE059 50%,
+      #6BE059 100%
+    );
+  }
+  
+  /*contour du bas*/
+  .btn-3 button::after{
+    content:"";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background:linear-gradient(90deg,
+      #E05257 0%,
+      #E05257 50%,
+      #E37A30 50%,
+      #E37A30 100%
+    );
+  }
+  
+  .btn-3 span{
+    display: block;
+    padding: 25px 25px;
+  }
+  
+  /*contour vertical gauche*/
+  .btn-3 span::before {
+    content:"";
+    width:4px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #993FD1;
+  }
+  
+  /*contour vertical droit*/
+  .btn-3 span::after{
+    content:"";
+    width:4px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #E9B840;
+  }
+  .btn-3 button:hover::before, button:hover::after{
+    width: 100%;
+    border: none;
+  }
+  .btn-3 button:hover span::before, button:hover span::after{
+    height: 100%;
+    border: none;
+  }
+  
+  
+  /*contour du bas*/
+  .btn-3::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0s;
+  }
+  
+  /*contour vertical droit*/
+  .btn-3 span::after{
+    transition-delay: 0.2s;
+    right: 0;
+    top: 0;
+  }
+  
+  /*contour du haut*/
+  .btn-3::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.4s;
+  }
+  
+  /*contour vertical gauche*/
+  .btn-3 span::before{
+    transition-delay: 0.6s;
+    left: 0;
+    bottom: 0;
+  }
+  
+  /*timing*/
+  
+  /*contour du bas*/
+  .btn-3:hover::after{
+    transition-delay: 0.6s;
+  }
+  
+  /*contour vertical droit*/
+  .btn-3:hover span::after{
+    transition-delay: 0.4s;
+  }
+  
+  /*contour du haut*/
+  .btn-3:hover::before{
+    transition-delay: 0.2s;
+  }
+  
+  /*contour vertical gauche*/
+  .btn-3:hover span::before{
+    transition-delay: 0s;
+  }
