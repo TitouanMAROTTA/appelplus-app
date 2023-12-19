@@ -1,5 +1,5 @@
 .work-in-progress{
-    margin: 10% 25% 10% 25%;
+    margin: 3% 25% 3% 25%;
 }
 
 .work-in-progress .card.is-wide {
@@ -8,8 +8,8 @@
 
 
 .work-in-progress .card.has-text-centered .card-content{
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .work-in-progress .card.has-text-centered h1 {
@@ -19,4 +19,12 @@ align-items: center;
 
 .work-in-progress .card-content {
     padding: 3.5rem 0;
+}
+
+.div-centered{
+    margin: 0 5% 0 5%;
+}
+
+h2{
+    font-size: 1.4rem;
 }

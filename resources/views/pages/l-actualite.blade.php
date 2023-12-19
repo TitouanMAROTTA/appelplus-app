@@ -6,13 +6,16 @@
             <div class="card has-text-centered is-wide">
                 <div class="card-content">
                     <h1>Work in progress</h1>
-                    <p>Cette page est en cours de réalisation.</p>
-                    <p>Vous y retrouverez les actualitées. (voir maquette)</p>
-
-                    <h2>Voici l'actualité de PictaVox : JT qui présente l'histoire de Pauline</h2>
+                        <p>Cette page est en cours de réalisation.</p>
+                        <p>Vous y retrouverez les actualitées. (voir maquette)</p>
                 </div>
             </div>
         </main>
+        
+        <div class="div-centered">
+            <h2>Actualité de PictaVox : JT qui présente l'histoire de Pauline</h2>
+            <iframe width="1730" height="666" src="https://www.youtube.com/embed/ujdP92XACV0" title="Reportage Pauline Laroche | Le 20H - PictaVox (20/12/2023)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
 
         <!-- Scroll to Top Button -->
         <div id="scrollToTopBtn" onclick="scrollToTop()">
