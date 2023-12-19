@@ -1,41 +1,50 @@
 /* couleurs tableau : Gris plus foncé : #CCCCC Gris plus clair : E0DEDE
 /* Paragraphe Accueillir*/
-.p1 h2{
-    background-color: #E05257;
-    color: white;
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
+h1{
+  font-size: 20px;
+}
+p{
+  margin-left: 20px;
+}
+.accueillir h2{
+    background-color: #E05257;
+}
 /* Paragraphe Informer*/
-.p2 h2{
+.informer h2{
     background-color: #E37A30;
-    color: white;
 }
 
 /* Paragraphe Lutter*/
-.p3 h2{
+.lutter h2{
     background-color: #6BE059;
-    color: white;
 }
 
 /* Paragraphe Soutenir*/
-.p4 h2{
+.soutenir h2{
     background-color: #993FD1;
-    color: white;
 }
+
+.soutenir {
+  margin-bottom: 60px;
+}
+
 /* espacement entre mes p*/
 
-main .qui-sommes-nous{
-    margin: 2% 20%;
+.main-nous-rejoindre{
+    margin: 2% 20% ;
 }
 
-main .qui-sommes-nous p:first-child{
-    margin-bottom: 2%;
-}
-
-/* taille de mes titres*/
+/* mise en forme de mes titres*/
 h2{
     font-size: 1em;
-    margin: 2em 0 1em 0;
+    color: white;
+    text-transform: uppercase;
+
+    padding: 5px 0 5px 5px;
+    margin: 10px 0 15px 0;
 }
 
 /* Tableau avec formule d'abonnement */
@@ -95,4 +104,3 @@ tbody tr {
 .tableau {
   border-spacing: 10px;
 }
-

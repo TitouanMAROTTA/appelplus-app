@@ -2,15 +2,6 @@
     <link rel="stylesheet" href="{{ asset('css/qui-sommes-nous.css') }}">
     <link rel="stylesheet" href="{{ asset('css/scroll-to-top-button.css') }}">
   
-    <!DOCTYPE html>
-    <html lang="fr">
-        <head> 
-            <meta charset="UTF-8">
-            <title>Qui sommes nous? APPEL+</title>
-            <link rel="stylesheet" href="quisommesnous.css"/>
-        </head>  
-        
-        <body>
             <main>
                 <section class="introduction">
                     <br><br>
@@ -166,8 +157,5 @@
             </div>
 
             <script src="{{ asset('js/scroll-to-top-button.js') }}"></script>
-
-        </body>
-    </html>
 </x-app-layout>
 	

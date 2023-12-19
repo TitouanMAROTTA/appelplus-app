@@ -5,18 +5,6 @@
   <link rel="stylesheet" href="{{ asset('css/style-button.css') }}">
 
 
-  <!DOCTYPE html>
-  <html lang="fr">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- <link rel="stylesheet" href="./style-button.css"> -->
-      <!-- <link rel="stylesheet" href="style.css"> -->
-      <!-- <link rel="stylesheet" href="https://use.typekit.net/vcy7kge.css"> -->
-      <title>APPEL+ | Association LGBTQIA+</title>
-    </head>
-
-    <body>
       <aside class="banniere">
         <div>
           <button class="btn-3 btn-blanc"><span><x-lien-nous-rejoindre>Rejoignez-nous</x-lien-nous-rejoindre></span></button>
@@ -46,36 +34,36 @@
         <section class="evenements trois-colonnes">
           <h2>Évènements à venir</h2>
             <article>
-              <a href="#">
+              <a href="event-unique">
               <figure>
                 <img src="{{ asset('images/joyeux-gay-pride-festival-lgbt.webp') }}" alt="">
                 <figcaption>
-                  <p>ven</p>
-                  <p>13</p>
-                  <p>nov</p>
+                  <p>mer</p>
+                  <p>20</p>
+                  <p>déc</p>
                 </figcaption>
               </figure>
               </a>
             </article>
             <article>
-              <a href="#">
+              <a href="event-unique">
               <figure>
                 <img src="{{ asset('images/amis-non-binaires-assis-tenant-drapeau-lgbt.webp') }}" alt="">
                   <figcaption>
-                  <p>mer</p>
-                  <p>29</p>
-                  <p>nov</p>
+                  <p>ven</p>
+                  <p>22</p>
+                  <p>déc</p>
                 </figcaption>
               </figure>
               </a>
             </article>
             <article>
-              <a href="#">
+              <a href="event-unique">
               <figure>
                 <img src="{{ asset('images/jeunes-celebrent-mois-fierte.webp') }}" alt="">
                 <figcaption>
-                  <p>jeu</p>
-                  <p>14</p>
+                  <p>lun</p>
+                  <p>25</p>
                   <p>déc</p>
                 </figcaption>
               </figure>
@@ -142,6 +130,4 @@
 
       <script src="{{ asset('js/scroll-to-top-button.js') }}"></script>
 
-    </body>
-  </html>
 </x-app-layout>

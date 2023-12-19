@@ -2,16 +2,6 @@
 	<link rel="stylesheet" href="{{ asset('css/event-unique.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/scroll-to-top-button.css') }}">
 
-	<!DOCTYPE html>
-	<html lang="fr">
-
-		<head>
-			<meta charset="utf-8">
-			<title>Nos évènements</title>
-			<link rel="stylesheet" href="nos-evenements.css">
-		</head>
-
-		<body>
 			<main>
 				<aside>
 					<img src="{{ asset('images/photoevent.webp') }}" alt="evenement appel-plus" />
@@ -21,15 +11,15 @@
 
 					<div>
 						<p>Maison de l'étudiant, 1 rue Neuma Fechine Borges, 86000 Poitiers</p>
-						<p>Jeudi 12 octobre 2023, de 15h à 18h</p>
-						<p>Libre sur inscription</p>
+						<p>Mercredi 22 décembre 2023, de 8h à 22h</p>
+						<p>Libre</p>
 						<a href="#" class="instagram">Voir sur Instagram</a>
 						<a href="#" class="facebook">Voir sur Facebook</a>
 					</div>	
 				</aside>
 
 				<article>
-					<h1>Equeertable d'octobre</h1>
+					<h1>Equeertable de décembre</h1>
                     
                     <div class="spaced">
                         <p>Evènement de groupe de Discussion pour les personnes LGBTQIA+</p>
@@ -100,10 +90,8 @@
 
 				<section>
 					<h2>Cet évènement est accessible sur inscription :</h2>
-					<a href="#" class="participer"> Je souaite participer</a>
+					<a href="#" class="participer"> Je souhaite participer</a>
 				</section>
 			</main>
 			
-		</body>
-	</html>
 </x-app-layout>

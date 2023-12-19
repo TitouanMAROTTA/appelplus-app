@@ -2,15 +2,6 @@
     <link rel="stylesheet" href="{{ asset('css/events.css') }}">
     <link rel="stylesheet" href="{{ asset('css/scroll-to-top-button.css') }}">
 
-    <!DOCTYPE html> 
-    <html lang="fr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Evenements</title>
-        </head>
-
-        <body>
             <main>
                 <div class="evenements">
 
@@ -148,6 +139,4 @@
 
             <script src="script.js"></script>
             <script src="{{ asset('js/scroll-to-top-button.js') }}"></script>
-        </body>
-    </html>
 </x-app-layout>

@@ -1,12 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Footer Responsive</title>
-  <link rel="stylesheet" href="https://use.typekit.net/xsu5wgc.css">
-  <link rel="stylesheet" href="style.css">
-</head> -->
-
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
 <body>
@@ -30,12 +21,6 @@
                     <x-lien-nous-contacter></x-lien-nous-contacter>class="black_button">Nous contacter</a>
                 </div>
             </div>
-            <!--<div class="footer-social-icon">
-                <span>Follow us</span>
-                <a href="../../icons_svg/facebook.svg"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-            </div>-->
             <div class="footer-widget">
                 <ul>
                     <li><a href="/">accueil</a></li>
@@ -66,5 +51,3 @@
             </div>
         </footer>
   
-</body>
-<!-- </html> -->

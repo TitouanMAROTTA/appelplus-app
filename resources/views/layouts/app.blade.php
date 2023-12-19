@@ -17,7 +17,6 @@
     @include('layouts.header')
 
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
 
         @yield('header')
 
@@ -27,12 +26,8 @@
                     {{ $slot }}
                 <x-separator></x-separator>
             </main>
-        </div>
 
          @include('layouts.footer')
         @yield('footer')
     </body>
-    
-    
-
 </html>
